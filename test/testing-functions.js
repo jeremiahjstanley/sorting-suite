@@ -13,5 +13,5 @@ const stressTest = (number, array, sortingAlgorithm) => {
   }
 }
 
-export {populateArray, stressTest}
+export { populateArray, stressTest }
 
