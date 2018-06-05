@@ -39,36 +39,31 @@ describe('MergeSort', () => {
   it('should sort a small array', () => {
     array = [1, 4, 10, 3, 11, 6, 2]
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
+
     let actual = mergeSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
 
   it('should sort a medium array', () => {
     array = populateArray(100000)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
     let actual = mergeSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
 
   it('should sort a large array', () => {
     array = populateArray(127000)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
     let actual = mergeSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
   
 }) 

@@ -36,39 +36,34 @@ describe('QuickSort', () => {
     expect(quickSort(array)).to.deep.equal([-5, -2, 0, 1, 3]);
   })
 
-  it.skip('should sort a small array', () => {
+  it('should sort a small array', () => {
     array = [1, 4, 10, 3, 11, 6, 2]
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
+
     let actual = quickSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
 
-  it.skip('should sort a medium array', () => {
+  it('should sort a medium array', () => {
     array = populateArray(10)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
     let actual = quickSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
 
-  it.skip('should sort a large array', () => {
+  it('should sort a large array', () => {
     array = populateArray(20)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
     let actual = quickSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
   
 }) 

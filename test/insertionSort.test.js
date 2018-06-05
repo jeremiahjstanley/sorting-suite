@@ -39,36 +39,31 @@ describe('InsertionSort', () => {
   it('should sort a small array', () => {
     array = [1, 4, 10, 3, 11, 6, 2]
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
+
     let actual = insertionSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
 
   it('should sort a medium array', () => {
-    array = populateArray(5000000)
+    array = populateArray(500000)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
     let actual = insertionSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
 
   it('should sort a large array', () => {
-    array = populateArray(10000000)
+    array = populateArray(100000)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
     let actual = insertionSort(array)
 
-    expect(actual).to.deep.equal(sortPrototype);
+    expect(actual).to.deep.equal(expected);
   })
   
 }) 

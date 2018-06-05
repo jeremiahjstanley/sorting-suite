@@ -43,31 +43,25 @@ describe('BubbleSort', () => {
   it('should sort a small array', () => {
     array = [1, 4, 10, 3, 11, 6, 2]
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
-    expect(bubble(array)).to.deep.equal(sortPrototype);
+    expect(bubble(array)).to.deep.equal(expected);
   })
 
   it('should sort a medium array', () => {
     array = populate(15000)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
-    expect(bubble(array)).to.deep.equal(sortPrototype);
+    expect(bubble(array)).to.deep.equal(expected);
   })
 
   it('should sort a large array', () => {
     array = populate(25000)
 
-    let sortPrototype = array.sort((a,b) => {
-      return a - b;
-    });
+    let expected = array.sort((a,b) => a - b);
 
-    expect(bubble(array)).to.deep.equal(sortPrototype);
+    expect(bubble(array)).to.deep.equal(expected);
   })
   
 }) 
