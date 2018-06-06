@@ -7,11 +7,22 @@ const populateArray = (number) => {
   return array;
 }
 
-const stressTest = (number, array, sortingAlgorithm) => {
+const methodStressTest = (number, array, sortingAlgorithm) => {
   for (let i = 0; i < number; i++) {
     sortingAlgorithm(array)
   }
+  return array
 }
 
-export { populateArray, stressTest }
+const sortStressTest = (number, array) => {
+  for (let i = 0; i < number; i++) {
+    array.sort((a, b) => a -b)
+  }
+  return array
+}
+
+export { populateArray, methodStressTest, sortStressTest }
+
+
+
 
